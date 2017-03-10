@@ -350,7 +350,7 @@ class RxNormLookup (object):
 			return None
 		
 		# check dedicated dable
-		sql = 'SELECT va FROM va_cache WHERE rxcui = ?'
+		sql = 'SELECT va FROM va_drug_class WHERE rxcui = ?'
 		res = self.sqlite.executeOne(sql, (rxcui,))
 		return res[0].split('|') if res else None
 	
